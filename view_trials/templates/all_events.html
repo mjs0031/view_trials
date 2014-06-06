@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title>Events</title>
+</head>
+
+<body>
+	<h1><b><i>Events: Complete Listing</i></b></h1>
+	
+	<hr>
+	<h3>Currently Assignment:</h3>
+
+	<br>
+	<table>
+		<tr><td width="150"><b>Date:</b></td><td width="100"><b>Company Tag:</b></td><td width="100"><b>Creator Tag:</b></td><td width="100"><b>Title:</b></td></tr>
+		{% for event in events_all %}
+			<tr><td><a href="/event/{{event.date}}/">{{event.date}}</a></td><td>{{event.company_tag}}</td><td>{{event.creator_tag}}</td><td>{{event.title}}</td></tr>
+		{% endfor %}
+	</table>
+
+	<br>
+	<hr>
+	<h3>Links:</h3>
+
+	<ul>
+
+	</ul>
+
+</body>
+</html>

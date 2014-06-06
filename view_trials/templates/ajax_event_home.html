@@ -1,0 +1,76 @@
+<html xmlns = "http://www.w3.org/1999/xhtml">
+<head>
+	<title>Ajax Event Seach</title>
+	
+	<script type = "text/javascript" language = "JavaScript">
+	
+		<!--
+		
+		var asyncRequest;
+		
+		window.onload = function()
+		{
+			document.getElementById('searchButton').onclick = function()
+			{
+				var searchString = document.getElementById('searchBox').value;
+				
+				getContent('/event/search/' + searchString);	    
+			}
+		}
+		
+		function getContent(url)
+		{
+			try
+			{
+				asyncRequest = new XMLHttpRequest();
+				asyncRequest.onreadystatechange = stateChange;
+				asyncRequest.open('GET', url, true)
+				asyncRequest.send( null );
+			}
+			catch(exception)
+			{
+				alert('failed');
+			}
+		}
+		
+		function stateChange()
+		{
+			if ( asyncRequest.readyState == 4 && asyncRequest.status == 200 )
+			{
+				document.getElementById('searchResults').innerHTML = 
+						 asyncRequest.responseText; 
+
+			}
+		}
+		-->
+	
+	</script>
+
+</head>
+
+<body>
+
+	<h1><b><i>Events: Event</i></b></h1>
+	
+	<hr>
+	<h3>Search for an event by company tag:</h3>
+	<input type='text' size='24' id='searchBox'>
+	</input>
+	<button id='searchButton'>Find Events...</button>
+	
+	<hr>
+	<table id='searchResults'>
+	
+	</table>
+
+	<br>
+	<br>
+	<hr>
+	<h3>Links:</h3>
+
+	<ul>
+
+	</ul>
+</body>
+
+</html>
